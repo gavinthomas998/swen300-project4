@@ -33,10 +33,10 @@ public class BirthNameProcessor {
      *
      * @return baby data
      */
-    public NameRecord getNext()
+    public NameRecord getNext() throws NoMoreData
     {
         if (!scanner.hasNextLine()) {
-            return null;
+            throw new NoMoreData("bad >:(((");
         }
         String line = scanner.nextLine();
         String[] lineParts = line.split(",");
@@ -46,6 +46,7 @@ public class BirthNameProcessor {
         int number = Integer.parseInt(lineParts[3]);
         String sex = lineParts[4];
         return new NameRecord(state, year, name, number, sex);
+
     }
 
     /**
@@ -57,7 +58,8 @@ public class BirthNameProcessor {
      * @param count increment
      * @param sex given sex of baby
      */
-    public record NameRecord(String state, int year, String name, int count, String sex) {
+    public record NameRecord(String state, int year, String name, int count, String sex)
+    {
 
     }
 }

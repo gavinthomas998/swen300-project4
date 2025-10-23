@@ -4,19 +4,17 @@ import java.util.Scanner;
 
 /**
  * Class that processes birth names from a given list.
- *
  * @author Ari
  * @author Julia
  * @author Gavin
  */
 public class BirthNameProcessor {
 
-    //Scanner used to get information from the given file
+    // Scanner used to get information from the given file
     private Scanner scanner;
 
     /**
      * Constructor for BirthNameProcessor.  Scans given file.
-     *
      * @param filename file passed into function to be scanned
      * @throws FileNotFoundException if no file is found
      */
@@ -30,7 +28,6 @@ public class BirthNameProcessor {
 
     /**
      * Reads and parses the next line of baby name data.
-     *
      * @return baby data
      */
     public NameRecord getNext() throws NoMoreData
@@ -54,15 +51,4 @@ public class BirthNameProcessor {
         }
         throw new NoMoreData();
     }
-
-    /**
-     * Stores the information about a given baby from one row of the file.
-     *
-     * @param state given state baby was born in
-     * @param year given birth year of baby
-     * @param name given name of baby
-     * @param count increment
-     * @param sex given sex of baby
-     */
-    public record NameRecord(String state, int year, String name, int count, String sex) {}
 }

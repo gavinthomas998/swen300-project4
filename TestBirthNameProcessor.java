@@ -18,10 +18,9 @@ public class TestBirthNameProcessor
      * @throws FileNotFoundException if file data is not found
      */
     @Test
-    public void firstRecord() throws FileNotFoundException, NoMoreData
-    {
+    public void firstRecord() throws FileNotFoundException {
         BirthNameProcessor f = new BirthNameProcessor("baby-names-by-state.csv");
-        BirthNameProcessor.NameRecord rec = f.getNext();
+        NameRecord rec = f.getNext();
         assertEquals("AK", rec.state());
         assertEquals(1960, rec.year());
         assertEquals("David", rec.name());
@@ -36,7 +35,7 @@ public class TestBirthNameProcessor
     public void readLast() throws FileNotFoundException
     {
         BirthNameProcessor f = new BirthNameProcessor("baby-names-by-state.csv");
-        BirthNameProcessor.NameRecord rec = null;
+        NameRecord rec = null;
         boolean stillReading = true;
         while (stillReading)
         {

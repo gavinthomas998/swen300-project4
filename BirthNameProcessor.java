@@ -46,9 +46,9 @@ public class BirthNameProcessor {
                 String state  = lineParts[0].substring(1, lineParts[0].length() - 1);
                 int year      = Integer.parseInt(lineParts[1]);
                 String name   = lineParts[2].substring(1, lineParts[2].length() - 1);
-                int number    =  Integer.parseInt(lineParts[3]);
+                int count    =  Integer.parseInt(lineParts[3]);
                 String sex    = lineParts[4].substring(1, lineParts[4].length() - 1);
-                return new NameRecord(state, year, name, number, sex);
+                return new NameRecord(state, year, name, count, sex);
             }
             catch (NumberFormatException _) {}
         }
@@ -61,8 +61,8 @@ public class BirthNameProcessor {
      * @param state given state baby was born in
      * @param year given birth year of baby
      * @param name given name of baby
-     * @param number increment
+     * @param count increment
      * @param sex given sex of baby
      */
-    public record NameRecord(String state, int year, String name, int number, String sex) {}
+    public record NameRecord(String state, int year, String name, int count, String sex) {}
 }

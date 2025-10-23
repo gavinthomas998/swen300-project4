@@ -25,7 +25,7 @@ public class TestBirthNameProcessor
         assertEquals("AK", rec.state());
         assertEquals(1960, rec.year());
         assertEquals("David", rec.name());
-        assertEquals(151, rec.number());
+        assertEquals(151, rec.count());
     }
 
     /**
@@ -53,6 +53,6 @@ public class TestBirthNameProcessor
         assertEquals("WY", rec.state());
         assertEquals(2008, rec.year());
         assertEquals("Mya", rec.name());
-        assertEquals(6, rec.number());
+        assertEquals(6, rec.count());
     }
 }

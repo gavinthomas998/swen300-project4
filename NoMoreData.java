@@ -5,9 +5,10 @@
  * @author Julia
  * @author Gavin
  */
-public class NoMoreData extends Throwable
+public class NoMoreData extends RuntimeException
 {
-    public NoMoreData(String message){
+    public NoMoreData()
+    {
         super();
     }
 }
